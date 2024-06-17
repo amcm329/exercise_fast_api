@@ -6,7 +6,9 @@
 
 The following project consists in the development of a system that creates a API REST.
 
-The tool used for API REST is Fast API (0.111.0) 
+The tool used for API REST is Fast API (0.111.0) and Docker.
+
+It's important to install Docker before this execution, whose instructions are not included in this README.
 
 The project's structure is the following: 
 
@@ -15,14 +17,9 @@ The project's structure is the following:
 |-- app
 | ´-- app.py 
 | ´-- requirements.txt 
-|-- db 
-| `-- init.sql
 |-- sources
-| `-- hired_employees.csv
-| `-- departments.csv
-| `-- jobs.csv
+| `-- foo.txt
 |-- Dockerfile
-|-- docker-compose.yml
 |-- simulation_interactions.py
 
 ```
@@ -31,18 +28,21 @@ The project's structure is the following:
 
 I briefly explain each one of these elements: 
 
-* **app.py** - the file that contains the Flask server. 
+* **app.py** - the file that contains the Fast Api server. 
 * **requirements.txt** - Python libraries that are required for the project. 
-* **init.sql** - script that initializes the creation of tables in the database. 
-* **hired_employees.csv, departments.csv, jobs.csv** - files required for the insertions. 
+* **foo.txt** - file required to maintain the sources folder. 
 * **Dockerfile** - file requested to initialize the server.
-* **docker-compose.yml** - file used to launch two services independently (Flask and MySQL).
 * **simulation_interactions.py** - file created to emulate the actions from the user perspective (requests).
 
 <br>
 
-In order to execute the code by using docker, you should utilize the following command: 
-**docker-compose up -d --build**
+In order to execute the code by using docker, you should utilize the following commands: 
+**docker build --tag docker_fast_api .**
+<center>  Don't forget the dot at the end </center> 
+
+And then 
+
+**docker run -d --name fast_api_final -p 80:80 docker_fast_api**
 
 <br>
 
