@@ -37,10 +37,15 @@ I briefly explain each one of these elements:
 <br>
 
 In order to execute the code by using docker, you should utilize the following commands: 
-**docker build --tag docker_fast_api .**
-<center>  Don't forget the dot at the end </center> 
 
-And then 
+<br>
+
+**docker build --tag docker_fast_api .**
+<center> (Don't forget the dot at the end) </center> 
+
+<br>
+
+And then:
 
 **docker run -d --name fast_api_final -p 80:80 docker_fast_api**
 
@@ -48,29 +53,12 @@ And then
 
 Regarding the considerations mentioned for the project:
 
-## STORAGE
-* In the container, I included the source files in the container so the experience can be more real from the user side. By executing the code simulation_interactions.py, the user will be able to carry out the mentioned activities (insert, restore, backup).
-* During the creation of the container, I considered the directories /home/backups and /home/sources which correspond to their respective activities.
-
-## LOGS
-* I used Python's library logger to carry out this exercise, especially for the insertions section. 
-
-## DOCKERFILE 
-* Besides it, I created a file docker-compose.yml so I could launch these two services (MySQL and Flask).
+## PERSISTANCE
+* In the container, the number of counts per endpoint are stored in a file called counter.txt, so everything will be modified and stored there..
 
 ## SECURITY
-* I am keen on security by obscurity, which means that each one of the functionalities does exactly what it's needed, even the script simulation_interactions.py contains this essence as it represents only the necessary actions that a user or a client-side script would carry out, for instance, I prepare some data to be json-friendly (see insert_table); initially, that section doesn't correspond to the server since it only works on the assumption that the data comes in a reliable format.
-It's the same example as in the insertions, I delegated this task to the user side by performing batch processing, and if it wasn't what the evaluator wanted, then I'd suggest moving to a ELT approach, where we can handle bulk_data without using enpoints since it wouldn't be scalable.
-* I also added simple yet powerful checks in the code so we can make sure that the inputs have been sanitized. 
-   
-## NEXT STEPS 
+* I am keen on security by obscurity, which means that each one of the functionalities does exactly what it's needed, even the script simulation_interactions.py contains this essence as it represents only the necessary actions that a user or a client-side script would carry out.
 
-There are many things to consider to harden this project, I mention the following: 
-* Modularize app.py following the encapsulation principles.
-* Using https certificate for better security.
-* Put primary and foreign key restrictions in the tables.
-* Sanitize inputs in order to avoid SQL injection attacks.
-* (For Flask) Use the WSGI server.
-* For more security, specially in the insertion sections, it would be desirable to avoid using direct schemas, my point is that an automated engine like SQLAlchemy can skip this step and therefore, avoiding showing information to malicious users.
-* Same as the previous one but using a vault server to store crucial information (paths, credentials), moreover, I tried to use a python version (hvac) but unfortunately, I ran out of time.
+## WAYS OF TESTING
+* As I mentioned before, I included 
 <br>
