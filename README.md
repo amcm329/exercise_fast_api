@@ -41,6 +41,9 @@ In order to execute the code by using docker, you should utilize the following c
 <br>
 
 **docker build --tag docker_fast_api .**
+
+<br>
+
 <center> (Don't forget the dot at the end) </center> 
 
 <br>
