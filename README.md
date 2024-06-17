@@ -75,4 +75,9 @@ Or there's even the possibility of carry out some tests by using Postman por ins
 
 ![imagen](https://github.com/amcm329/fast_api_exercise/assets/35039222/438928d5-d6e8-4ee7-9ff3-8b2193d4c8ac)
 
+![imagen](https://github.com/amcm329/fast_api_exercise/assets/35039222/a856455b-1d3a-4971-abbb-7eedb4796305)
+
+![imagen](https://github.com/amcm329/fast_api_exercise/assets/35039222/b0126094-fb64-41fb-a5ae-bf94221f34a1)
+
+
 <br>
