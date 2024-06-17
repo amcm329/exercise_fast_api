@@ -64,5 +64,15 @@ Regarding the considerations mentioned for the project:
 * I am keen on security by obscurity, which means that each one of the functionalities does exactly what it's needed, even the script simulation_interactions.py contains this essence as it represents only the necessary actions that a user or a client-side script would carry out.
 
 ## WAYS OF TESTING
-* As I mentioned before, I included 
+* As I mentioned before, I included some functionalities within the file simulation_interactions.py, but in case the tester wants to try another path, I include (assuming that the server is located in 127.0.0.1)
+  
+* http://127.0.0.1/get_count
+* http://127.0.0.1:80/get_date?boolean=False
+* http://127.0.0.1:80/get_date?boolean=True
+* http://127.0.0.1:80/get_date?boolean=x
+
+Or there's even the possibility of carry out some tests by using Postman por instance (functionality not included in this code): 
+
+![imagen](https://github.com/amcm329/fast_api_exercise/assets/35039222/438928d5-d6e8-4ee7-9ff3-8b2193d4c8ac)
+
 <br>
