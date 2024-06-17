@@ -1,0 +1,2 @@
+#Library used for FastAPI 
+fastapi == 0.111.0 
