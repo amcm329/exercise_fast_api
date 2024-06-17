@@ -47,6 +47,7 @@ In order to execute the code by using docker, you should utilize the following c
 <center> (Don't forget the dot at the end) </center> 
 
 <br>
+<br>
 
 And then:
 
