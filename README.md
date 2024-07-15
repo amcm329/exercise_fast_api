@@ -41,7 +41,7 @@ In order to execute the code by using docker, you should utilize the following c
 <br>
 
 ```console
-**docker build --tag docker_fast_api .**
+docker build --tag docker_fast_api .
 ```
 
 <br>
@@ -53,7 +53,9 @@ In order to execute the code by using docker, you should utilize the following c
 
 And then:
 
-**docker run -d --name fast_api_final -p 80:80 docker_fast_api**
+```console
+docker run -d --name fast_api_final -p 80:80 docker_fast_api
+```
 
 <br>
 
