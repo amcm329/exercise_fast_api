@@ -40,7 +40,9 @@ In order to execute the code by using docker, you should utilize the following c
 
 <br>
 
+```console
 **docker build --tag docker_fast_api .**
+```
 
 <br>
 
